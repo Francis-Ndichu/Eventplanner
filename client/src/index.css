@@ -1,0 +1,85 @@
+/* Previous styles */
+
+body, html {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+
+.dashboard {
+  display: flex;
+
+}
+
+.sidebar {
+  width: 400px;
+  background-color: #f4f4f4;
+  padding: 20px;
+  margin-top: 5%;
+}
+
+.main-section{
+  display: flex;
+  flex-direction: column;
+  width: 75%;
+  margin-top: 5rem;
+}
+
+.column {
+  flex: 1;
+  margin-top: 5%;
+  width: 75%; /* Occupy from left to right */
+ 
+}
+
+.column-section {
+  flex: 1;
+  padding: 20px;
+  margin-top: 1%;
+  justify-content: center; /* Center align horizontally */
+}
+
+.column-section h2 {
+  margin-top: 0;
+}
+
+/* Add style for horizontal separation */
+.column-section ul {
+  border-top: 1px solid #ccc;
+  padding-top: 10px;
+}
+
+.column-section ul li {
+  margin-bottom: 10px;
+}
+
+/* Media query for responsiveness */
+@media screen and (max-width: 768px) {
+  .dashboard {
+    flex-direction: column;
+  }
+  .sidebar {
+    width: 100%;
+  }
+  .separator {
+    display: none;
+  }
+}
+
+
+/* Additional styles for readability */
+h1, h2 {
+  margin-top: 0;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+li {
+  margin-bottom: 10px;
+}
+.columns-container {
+  display: flex;
+}
