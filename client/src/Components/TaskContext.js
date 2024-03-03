@@ -5,6 +5,9 @@ const TaskContext = createContext();
 export const TaskProvider = ({ children }) => {
   const [tasks, setTasks] = useState([]);
   const [sourceSection, setSourceSection] = useState(null);
+  const [columnIds, setColumnIds] = useState([]);
+
+
 
   useEffect(() => {
     const fetchTasks = async () => {
@@ -64,7 +67,7 @@ export const TaskProvider = ({ children }) => {
   };
 
   return (
-    <TaskContext.Provider value={{ tasks, setTasks, sourceSection, setSourceSection, updateTaskList, onDrop }}>
+    <TaskContext.Provider value={{ tasks, setTasks, sourceSection, setSourceSection, updateTaskList, onDrop , columnIds, setColumnIds }}>
       {children}
     </TaskContext.Provider>
   );

@@ -19,11 +19,12 @@ function Task({ task }) {
 
   const [{ isDragging }, drag] = useDrag({
     type: 'TASK', // Define the type here
-    item: { id: task.id },
+    item: { id: String(task.id) }, // Convert id to string
     collect: monitor => ({
       isDragging: !!monitor.isDragging(),
     }),
   });
+  
 
   const handlePriorityChange = (e) => {
     setPriority(e.target.value);
